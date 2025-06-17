@@ -2,8 +2,8 @@ import React from 'react'
 import Image from "next/image";
 import {Separator} from "@/components/ui/separator";
 
-const School = ({logo, level, name, gpa, start, end, degree, firstmajor, secondmajor, minor, place, courses}:
-                    {logo: string, level: string, name: string, gpa: number, start: Date, end: Date, degree: string, firstmajor: string, secondmajor?: string, minor?: string, place: string, courses: string[]}) => {
+const School = ({logo, name, gpa, time, degree, firstmajor, secondmajor, minor, location, courses}:
+                    {logo: string, name: string, gpa: number, time: {start: Date, end: Date}, degree: string, firstmajor: string, secondmajor?: string, minor?: string, location: string, courses: string[]}) => {
     return (
         <div className={"grid grid-cols-[20%_auto_auto_20%] grid-rows-[auto_auto_auto] gap-10 mx-5 my-5 items-center text-[20px] "}>
             <div className={"row-start-1 row-span-3 col-start-1 col-span-1 place-self-center"}>
@@ -25,8 +25,8 @@ const School = ({logo, level, name, gpa, start, end, degree, firstmajor, secondm
             </div>
 
             <div className={"row-start-2 row-span-1 col-start-4 col-span-1 text-[15px] self-start"}>
-                <p>{start.toLocaleDateString("en-US", {month: "short"})}, {start.getFullYear()} - {end.toLocaleDateString("en-US", {month: "short"})}, {end.getFullYear()}</p>
-                <p>@ {place}</p>
+                <p>{time.start.toLocaleDateString("en-US", {month: "short"})}, {time.start.getFullYear()} - {time.end.toLocaleDateString("en-US", {month: "short"})}, {time.end.getFullYear()}</p>
+                <p>@ {location}</p>
             </div>
 
             <div className={"row-start-3 row-span-1 col-start-2 col-span-3"}>

@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import {NavBar} from "@/components/navbar/NavBar";
 
 export const metadata: Metadata = {
-  title: "Hien Dau website",
-  description: "Hien Dau's website",
+    title: "Hien Dau Website",
+    description: "Hien Dau's website",
     icons: "/website_icon.png",
 };
 

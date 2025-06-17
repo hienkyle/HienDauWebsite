@@ -1,6 +1,8 @@
 import React from 'react'
-import SectionHeader from "@/components/aboutme/SectionHeader";
+import SectionHeader from "@/components/header/SectionHeader";
 import Job from "@/components/workexperience/Job";
+import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 
 const WorkExperience = () => {
     const works = [
@@ -16,7 +18,7 @@ const WorkExperience = () => {
                 start: new Date(2024, 7),
                 end: new Date(2025, 4),
             },
-            place: "Fort Worth, Texas",
+            location: "Fort Worth, Texas",
             logo: "/office_chancellor_logo.png"
         },
         {
@@ -31,7 +33,7 @@ const WorkExperience = () => {
                 start: new Date(2023, 0),
                 end: new Date(2025, 4),
             },
-            place: "Fort Worth, Texas",
+            location: "Fort Worth, Texas",
             logo: "/tcu_math_logo.svg"
         },
         {
@@ -45,7 +47,7 @@ const WorkExperience = () => {
                 start: new Date(2024, 4),
                 end: new Date(2024, 10),
             },
-            place: "Fort Worth, TX",
+            location: "Fort Worth, TX",
             logo: "/tcu_neeley_logo.png"
         },
         {
@@ -60,7 +62,7 @@ const WorkExperience = () => {
                 start: new Date(2023, 8),
                 end: new Date(2024, 7),
             },
-            place: "Fort Worth, Texas",
+            location: "Fort Worth, Texas",
             logo: "/acm_logo.large"
         },
         {
@@ -75,19 +77,46 @@ const WorkExperience = () => {
                 start: new Date(2022, 5),
                 end: new Date(2022, 7),
             },
-            place: "Hanoi, Vietnam",
+            location: "Hanoi, Vietnam",
             logo: "/tinhvan_logo.png"
         }
     ]
-    return (
-        <div className={"px-5 py-5 mx-5 my-5 border bg-gray-400 border rounded-lg"}>
-            <SectionHeader title={"Work Experience"}/>
-            <div className={""}>
-                {works.map((work, index) => (
-                    <Job key={index} companyName={work.companyName} description={work.description} logo={work.logo} place={work.place} position={work.position} time={work.time}/>
-                ))}
-            </div>
 
+    return (
+        <div className={"px-5 py-5 mx-5 my-5"}>
+            <SectionHeader title={"Work Experience"} desc={"My Past Jobs"} alignment={"right"}/>
+            <ScrollArea className={"w-full h-[500px] overflow-y-auto"}>
+                <Table>
+                    <TableHeader className={"sticky top-0 bg-black"}>
+                        <TableRow className={"text-center text-[20px]"}>
+                            <TableHead className={"w-1/5"}>Time</TableHead>
+                            <TableHead className={"w-1/5"}>Position</TableHead>
+                            <TableHead>Company</TableHead>
+                            <TableHead>Duties</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody className={"text-[20px]"}>
+                        {works.map((work, index) => (
+                            <TableRow key={index}>
+                                <TableCell>{work.time.start.toLocaleDateString("en-US", {month: "short"})}, {work.time.start.getFullYear()} - {work.time.end.toLocaleDateString("en-US", {month: "short"})}, {work.time.end.getFullYear()}</TableCell>
+                                <TableCell>{work.position}</TableCell>
+                                <TableCell>
+                                    <p>{work.companyName}</p>
+                                    <p>@ {work.location}</p>
+                                </TableCell>
+                                <TableCell className={"whitespace-normal"}>
+                                    <ul className={"list-disc pl-5"}>
+                                        {work.description.map((desc, index) => (
+                                            <li key={index}>{desc}</li>
+                                        ))}
+                                    </ul>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+                <ScrollBar/>
+            </ScrollArea>
         </div>
     )
 }

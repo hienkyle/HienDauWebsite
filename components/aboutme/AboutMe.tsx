@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import {Separator} from "@/components/ui/separator";
-import SectionHeader from "@/components/aboutme/SectionHeader";
+import SectionHeader from "@/components/header/SectionHeader";
 
 const AboutMe = () => {
     return (
