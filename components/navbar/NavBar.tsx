@@ -29,7 +29,7 @@ export const NavBar = () => {
         }
     ]
     return (
-        <div className={"flex justify-between sticky top-0 bg-[#010101] px-5 py-5"}>
+        <div className={"flex justify-between sticky top-0 bg-[#010101] px-5 py-5 z-20"}>
             <p className={"self-center font-bold text-[20px]"}>Hien Dau E-Portfolio</p>
             <NavigationMenu viewport={false}>
                 <NavigationMenuList>

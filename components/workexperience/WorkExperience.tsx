@@ -86,28 +86,28 @@ const WorkExperience = () => {
         <div className={"px-5 py-5 mx-5 my-5"}>
             <SectionHeader title={"Work Experience"} desc={"My Past Jobs"} alignment={"right"}/>
             <ScrollArea className={"w-full h-[500px] overflow-y-auto"}>
-                <Table>
-                    <TableHeader className={"sticky top-0 bg-black"}>
-                        <TableRow className={"text-center text-[20px]"}>
-                            <TableHead className={"w-1/5"}>Time</TableHead>
-                            <TableHead className={"w-1/5"}>Position</TableHead>
-                            <TableHead>Company</TableHead>
-                            <TableHead>Duties</TableHead>
+                <Table className={"gap-1"}>
+                    <TableHeader className={"sticky top-0 bg-black z-10"}>
+                        <TableRow className={"text-[25px]"}>
+                            <TableHead className={"w-1/5 text-center"}>Time</TableHead>
+                            <TableHead className={"w-1/5 text-center"}>Position</TableHead>
+                            <TableHead className={"w-1/5 text-center"}>Company</TableHead>
+                            <TableHead className={"w-2/5 text-center"}>Duties</TableHead>
                         </TableRow>
                     </TableHeader>
-                    <TableBody className={"text-[20px]"}>
+                    <TableBody className={"text-[18px]"}>
                         {works.map((work, index) => (
                             <TableRow key={index}>
-                                <TableCell>{work.time.start.toLocaleDateString("en-US", {month: "short"})}, {work.time.start.getFullYear()} - {work.time.end.toLocaleDateString("en-US", {month: "short"})}, {work.time.end.getFullYear()}</TableCell>
-                                <TableCell>{work.position}</TableCell>
-                                <TableCell>
+                                <TableCell className={"py-px"}>{work.time.start.toLocaleDateString("en-US", {month: "short"})}, {work.time.start.getFullYear()} - {work.time.end.toLocaleDateString("en-US", {month: "short"})}, {work.time.end.getFullYear()}</TableCell>
+                                <TableCell className={"py-px"}>{work.position}</TableCell>
+                                <TableCell className={"py-px"}>
                                     <p>{work.companyName}</p>
                                     <p>@ {work.location}</p>
                                 </TableCell>
-                                <TableCell className={"whitespace-normal"}>
+                                <TableCell className={"whitespace-normal py-px"}>
                                     <ul className={"list-disc pl-5"}>
                                         {work.description.map((desc, index) => (
-                                            <li key={index}>{desc}</li>
+                                            <li key={index} className={"py-px"}>{desc}</li>
                                         ))}
                                     </ul>
                                 </TableCell>

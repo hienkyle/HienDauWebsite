@@ -1,7 +1,7 @@
-import Header from "@/components/header/Header";
 import AboutMe from "@/components/aboutme/AboutMe";
 import Education from "@/components/education/Education";
 import WorkExperience from "@/components/workexperience/WorkExperience";
+import Skills from "@/components/skills/Skills";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
         <AboutMe/>
         <Education/>
         <WorkExperience/>
+        <Skills/>
     </div>
   );
 }
