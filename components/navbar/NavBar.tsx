@@ -24,8 +24,12 @@ export const NavBar = () => {
             href: "#projects",
         },
         {
-            title: "Skills and Honors",
-            href: "#skillsandhonors",
+            title: "Skills",
+            href: "#skills",
+        },
+        {
+            title: "Honors",
+            href: "#honors",
         }
     ]
     return (

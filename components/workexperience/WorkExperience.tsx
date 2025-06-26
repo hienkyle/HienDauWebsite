@@ -83,7 +83,7 @@ const WorkExperience = () => {
     ]
 
     return (
-        <div className={"px-5 py-5 mx-5 my-5"}>
+        <div className={"my-container"}>
             <SectionHeader title={"Work Experience"} desc={"My Past Jobs"} alignment={"right"}/>
             <ScrollArea className={"w-full h-[500px] overflow-y-auto"}>
                 <Table className={"gap-1"}>

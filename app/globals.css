@@ -1,7 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-.container {
-    padding: 1.25rem;
+.my-container {
+    padding: 1.25rem 2.5rem;
     margin: 1.25rem;
+}
+
+.upward-shadow {
+    box-shadow: inset 0 -10px 15px;
+}
+
+.downward-shadow {
+    box-shadow: inset 0 10px 15px #18C0B8;
 }

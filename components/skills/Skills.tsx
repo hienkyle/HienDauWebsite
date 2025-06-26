@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import Skill from "@/components/skills/Skill";
 import SectionHeader from "@/components/header/SectionHeader";
 import Figure from "@/components/skills/Figure";
@@ -50,50 +50,50 @@ const Skills = () => {
         frame: [
             {
                 skill: "TailwindCSS",
-                logo: "/java_icon.png",
+                logo: "/tailwind_icon.png",
             },
             {
                 skill: "Spring Boot",
-                logo: "/java_icon.png",
+                logo: "/spring_highlight.png",
             },
             {
                 skill: "VueJS",
-                logo: "/java_icon.png",
+                logo: "/vue_icon.png",
             },
             {
                 skill: "ReactJS",
-                logo: "/java_icon.png",
+                logo: "/react_highlight.gif",
             },
             {
                 skill: "NextJS",
-                logo: "/java_icon.png",
+                logo: "/next_icon.png",
             }
         ],
         mis: [
             {
                 skill: "Agile/Waterfall Methodology",
-                logo: "/java_icon.png",
+                logo: "/waterfall_icon.png",
             },
             {
                 skill: "Test-Driven Development (TDD)",
-                logo: "/java_icon.png",
+                logo: "/tdd_icon.gif",
             },
             {
                 skill: "CI/CD",
-                logo: "/java_icon.png",
+                logo: "/cicd_icon.gif",
             },
             {
                 skill: "RESTful API",
-                logo: "/java_icon.png",
+                logo: "/api_icon.gif",
             },
             {
                 skill: "GitHub",
-                logo: "/java_icon.png",
+                logo: "/git_icon.gif",
             },
         ]
     }
     return (
-        <div className="px-10 py-5 mx-5 my-5">
+        <div className="my-container">
             <SectionHeader title={"Skills"} desc={"What I Have Learned"}/>
             <div className={"flex flex-row"}>
                 <div className={"w-1/2 mr-5 flex"}>

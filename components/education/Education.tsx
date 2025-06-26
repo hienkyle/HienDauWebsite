@@ -4,8 +4,6 @@ import School from "@/components/education/School";
 import Image from "next/image";
 
 const Education = () => {
-    const courses = ["Software Engineering", "Data Structures", "Analysis of Algorithms", "Object-Oriented Programming (OOP) and Design Patterns", "Computer Organization and Operating Systems (OS)", "Mobile App Development", "Unix/Linux", "Web Technologies", "Database Systems", "Cloud Computing"]
-
     const schools = [
         {
             name: "Texas Christian University",
@@ -30,8 +28,9 @@ const Education = () => {
                 "Cloud Computing"]
         }
     ]
+
     return (
-        <div className={"px-10 py-5 mx-5 my-5 shadow-[inset_0_10px_15px] rounded-3xl flex flex-row items-center-safe"}>
+        <div className={"my-container downward-shadow rounded-3xl flex flex-row items-center-safe"}>
             <div className={"flex flex-col w-3/4"}>
                 <SectionHeader title={"Education"} desc={"My Degrees"}/>
                 {schools.map((school, index) => (
