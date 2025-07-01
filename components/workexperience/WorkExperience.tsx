@@ -1,6 +1,5 @@
 import React from 'react'
 import SectionHeader from "@/components/header/SectionHeader";
-import Job from "@/components/workexperience/Job";
 import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 
