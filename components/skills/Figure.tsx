@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-const Figure = ({src, cap, expl}: {src: string, cap: string, expl: string}) => {
+const Figure = ({src, cap, expl}: {src: string, cap: string, expl?: string}) => {
     return (
         <div className={"flex flex-col items-center justify-center"}>
             <Image src={src} alt={`${src} logo`} width={100} height={100}/>
