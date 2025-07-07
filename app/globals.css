@@ -16,3 +16,7 @@
 .downward-shadow {
     box-shadow: inset 0 10px 15px #18C0B8;
 }
+
+html{
+    scroll-behavior: smooth;
+}

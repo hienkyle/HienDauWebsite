@@ -4,7 +4,7 @@ import SectionHeader from "@/components/header/SectionHeader";
 
 const AboutMe = () => {
     return (
-        <div className={"my-container flex flex-row items-center justify-around bg-black"}>
+        <div id={"about"} className={"my-container flex flex-row items-center justify-around bg-black"}>
             <div className={"flex flex-col justify-around px-5 py-5 max-w-2/3"}>
                 <SectionHeader title={"Software Engineer"} desc={"Hien Minh Dau"}/>
 

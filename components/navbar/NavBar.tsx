@@ -20,16 +20,20 @@ export const NavBar = () => {
             href: "#workexp",
         },
         {
-            title: "Projects",
-            href: "#projects",
-        },
-        {
             title: "Skills",
             href: "#skills",
         },
         {
+            title: "Projects",
+            href: "#projects",
+        },
+        {
             title: "Honors",
             href: "#honors",
+        },
+        {
+            title: "Contacts",
+            href: "#contacts",
         }
     ]
     return (
@@ -39,7 +43,7 @@ export const NavBar = () => {
                 <NavigationMenuList>
                     {sections.map((section, index) => (
                         <NavigationMenuItem key={index}>
-                                <NavigationMenuLink href={`${section.href}`} className={"text-[20px]"}>
+                                <NavigationMenuLink href={`${section.href}`} className={"text-[20px] mx-5"}>
                                     {section.title}
                                 </NavigationMenuLink>
                         </NavigationMenuItem>

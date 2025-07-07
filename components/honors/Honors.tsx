@@ -14,7 +14,7 @@ const Honors = () => {
         }
     ]
     return (
-        <div className={"my-container"}>
+        <div id={"honors"} className={"my-container"}>
             <SectionHeader title={"Honors"} desc={"Societies I Have Joined"}/>
             <div className={"flex justify-evenly"}>
                 {societies.map((society, index) => (

@@ -85,9 +85,9 @@ const Projects = () => {
     }
 
     return (
-        <div className="my-container">
+        <div id={"projects"} className={"my-container"}>
             <SectionHeader title={"Projects"} desc={"What I Have Done"} alignment={"right"}/>
-            <div className={" flex flex-row"}>
+            <div className={"flex flex-row gap-5"}>
                 <div className={"w-1/2"}>
                     <div className={"text-center font-bold text-[30px] my-5"}>Projects</div>
                     <div className={"flex flex-wrap items-center justify-evenly gap-5"}>

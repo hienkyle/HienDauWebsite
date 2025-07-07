@@ -30,7 +30,7 @@ const Education = () => {
     ]
 
     return (
-        <div className={"my-container rounded-3xl flex flex-row items-center-safe"}>
+        <div id={"education"} className={"my-container rounded-3xl flex flex-row items-center-safe"}>
             <div className={"flex flex-col w-3/4"}>
                 <SectionHeader title={"Education"} desc={"My Degrees"}/>
                 {schools.map((school, index) => (

@@ -93,7 +93,7 @@ const Skills = () => {
         ]
     }
     return (
-        <div className="my-container">
+        <div id={"skills"} className={"my-container"}>
             <SectionHeader title={"Skills"} desc={"What I Have Learned"}/>
             <div className={"flex flex-row"}>
                 <div className={"w-1/2 mr-5 flex"}>

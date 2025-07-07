@@ -15,7 +15,7 @@ const SectionHeader = ({title, desc, alignment}: {title: string, desc: string, a
 export default SectionHeader
 
 function AlignedBox({alignment, children}: {alignment: string, children: React.ReactNode}) {
-    let alignmentClass = "";
+    let alignmentClass: string;
 
     switch (alignment) {
         case "center":

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import localFont from "next/font/local";
 import {NavBar} from "@/components/navbar/NavBar";
+import React from "react";
 
 export const metadata: Metadata = {
     title: "Hien Dau Website",
